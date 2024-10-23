@@ -11,5 +11,5 @@ app.listen(PORT, () => {  // to start up the server
 });
 // to test if it's working
 app.get('/', (req, res) => {
-res.status(400).json({message: 'Working well'})
+res.status(200).json({message: 'Working well'})
 });

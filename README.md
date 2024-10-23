@@ -40,10 +40,20 @@ This project is a simple calculator API built using ExpressJS (Node.js), providi
 
 # Screenshots
 
-1. Addition
-- ![addition Screenshot](screenshots/1..jpg)
-- ![addition Screenshot](screenshots/1.1.jpg)
+1. Testing the server connection
+- ![addition Screenshot](screenshots/5.jpg)
 
+2. Addition
+- ![addition Screenshot](screenshots/1.jpg)
+
+3. Subtraction
+- ![subtraction Screenshot](screenshots/2.jpg)
+
+4. Multiplication
+- ![multiplication Screenshot](screenshots/3.jpg)
+
+5. Division
+- ![division Screenshot](screenshots/4.jpg)
 
 
 
@@ -51,11 +61,32 @@ This project is a simple calculator API built using ExpressJS (Node.js), providi
 
 1. Clone the repository to your laptop, system or computer by running this: 
 ```bash
- git clone https://github.com/Temitope1606/Simple-e-commerce-website.git
+ git clone https://github.com/Temitope1606/calculator-api-docker-deploy-render.git
 ```
-2. Test the API using Postman or browser to ensure that the connection is successful and the server has started:
+2. Run the server by typing this in the terminal:
 ```bash
- http://localhost:4000/calculator
+node server.js
+```
+
+3. Test the API using Postman or browser to ensure that the connection is successful and the server is running:
+```bash
+ http://localhost:4000
  ```
 
-3. 
+4. Test the operations API using Postman, Insomnia or any API Client:
+For example: Choose **POST** as the request type
+```bash
+http://localhost:4000/calculator/api/calculate/divide
+```
+
+
+# Docker Setup
+
+1. Build the Docker image:
+```bash
+docker build -t calculator-api .
+```
+2. Run the Docker container:
+``` bash
+docker run -p 4000:4000 calculator-api
+```
